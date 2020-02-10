@@ -8,4 +8,5 @@ Repository of Jupyter Notebooks for downloading bad visualisation examples
 1. images_download
 1. images_recover
 1. image_convert
+1. image_files
 1. image_meta

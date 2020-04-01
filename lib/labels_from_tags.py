@@ -16,18 +16,18 @@ labels_from_tags_mapping = {
     'Percentages': ['fault:percentage'],
     'Percentage': ['fault:percentage'],
 
-    'StackedBarChart': ['encoding:rectangle', 'form:barchart', 'encoding:stacked'],
-    'BarChart': ['encoding:rectangle', 'form:barchart'],
-    'bar graph': ['encoding:rectangle', 'form:barchart'],
-    'bar graphs': ['encoding:rectangle', 'form:barchart'],
-    'BarCharts': ['encoding:rectangle', 'form:barchart'],
+    'StackedBarChart': ['form:barchart', 'layout:stacked'],
+    'BarChart': ['form:barchart'],
+    'bar graph': ['form:barchart'],
+    'bar graphs': ['form:barchart'],
+    'BarCharts': ['form:barchart'],
 
     '3D': ['fault:3d'],
     '3D is Cool!': ['fault:3d'],
 
-    'LineChart': ['encoding:line', 'form:linechart'],
-    'line chart': ['encoding:line', 'form:linechart'],
-    'line graph': ['encoding:line', 'form:linechart'],
+    'LineChart': ['form:linechart'],
+    'line chart': ['form:linechart'],
+    'line graph': ['form:linechart'],
 
     'Radial': ['layout:circular'],
     'PieChart': ['layout:circular', 'form:piechart'],
@@ -48,8 +48,8 @@ labels_from_tags_mapping = {
     'maps': ['data:geospatial'],
     'choropleth': ['data:geospatial'],
 
-    'AreaChart': ['encoding:area'],
-    'Area/Volume': ['encoding:area'],
+    'AreaChart': ['fault:area'],
+    'Area/Volume': ['fault:area'],
 
     'LabelLines': ['fault:label'],
     'Labeling': ['fault:label'],

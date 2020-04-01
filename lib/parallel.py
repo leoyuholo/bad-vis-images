@@ -1,7 +1,7 @@
 from joblib import Parallel, delayed
 from tqdm.notebook import tqdm
 
-def parallel (f, params_list, params_dict={}, total=None, tqdm_postfix='', leave=True, n_jobs=-2):
+def parallel (f, params_list, params_dict={}, total=None, tqdm_postfix='', leave=True, n_jobs=-1):
     results = []
     with Parallel(n_jobs=n_jobs, require='sharedmem') as p:
         results = p(delayed(f)(params, **params_dict)

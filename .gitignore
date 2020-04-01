@@ -1,7 +1,10 @@
 images
+bad-vis-images
 recycle
 .ipynb_checkpoints
 
 *.pyc
 *.sqlite
 *.tar.gz
+*.zip
+

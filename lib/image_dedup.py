@@ -21,6 +21,19 @@ def hashes_diff (hashes_x, hashes_y, hash_type=None):
     diff = (sum(diffs) - min(diffs) - max(diffs)) / 2
     return diff
 
+def is_duplicated (image_x, image_y, duplicated_image_phash_pairs):
+    image_x_phash = image_x['phash']
+    image_y_phash = image_y['phash']
+
+    if frozenset([image_x_phash, image_y_phash]) in duplicated_image_phash_pairs:
+        return True
+
+    # phash distance < 4 considered as the same
+    if hashes_diff(make_hashes(image_x), make_hashes(image_y), 'phash') < 4:
+        return True
+
+    return False
+
 def cal_distance (args):
     start_i, start_j, end_i, end_j, key, hash_type = args
     hashes = shared_dict[key]

@@ -3,6 +3,7 @@ bad-vis-images
 recycle
 .ipynb_checkpoints
 
+*credentials.json
 *.pyc
 *.sqlite
 *.tar.gz

@@ -1,9 +1,11 @@
 from functools import cmp_to_key
+from datetime import datetime
 
+# prioritize high numbers
 source_ranks = {
-    'dataisugly': 3,
-    'wtf-viz': 2,
-    'badvisualisations': 1
+    'dataisugly': 1,
+    'wtf-viz': -1,
+    'badvisualisations': -2
 }
 
 def get_source_rank (source):
@@ -18,19 +20,35 @@ def sort_posts (posts):
         rank_y = get_source_rank(post_y['source'])
         if rank_x != rank_y:
             return rank_y - rank_x
-        return post_score(post_y) - post_score(post_x)
+        return (datetime.fromisoformat(post_x['datetime']) - datetime.fromisoformat(post_y['datetime'])).total_seconds()
+#         return post_score(post_y) - post_score(post_x)
 
     return sorted(posts, key=cmp_to_key(preferred))
 
+# prioritize high numbers
 image_type_ranks = {
     'manual': 4,
     'archive': 3,
     'external_link': 2,
-    'preview': 1
+    'external_link_alt': 1.5,
+    'preview': 1,
+    'preview_alt': 0.5
 }
 
 def get_image_type_rank (source):
     return image_type_ranks.get(source, 0)
+
+def simple_sort_images (images):
+    def preferred (image_x, image_y):
+        image_type_rank_x = get_image_type_rank(image_x['image_type'])
+        image_type_rank_y = get_image_type_rank(image_y['image_type'])
+        # external over preview
+        if image_type_rank_x != image_type_rank_y:
+            return image_type_rank_y - image_type_rank_x
+        else:
+            return image_x['index_in_album'] - image_y['index_in_album']
+
+    return sorted(images, key=cmp_to_key(preferred))
 
 def sort_images (images):
     def preferred (image_x, image_y):

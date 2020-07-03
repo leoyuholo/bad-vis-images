@@ -1,15 +1,13 @@
-# Bad Vis Browser Notebooks
+# Bad Vis Browser Images
 
-Repository of Jupyter Notebooks for downloading bad visualisation examples
+Repository of images, labels and Jupyter notebooks used in Bad Vis Browser
 
-## Notebook execution sequence
-1. crawlers (tumblr_crawler, reddit_crawler, reddit_pushshift_crawler, etc.)
-2. digest (tumblr_digest, reddit_digest)
-3. images_download
-4. images_recover
-5. image_convert
-6. image_files
-7. image_meta
-8. images_dedup
-9. images_thumbnail
-10. images_labeling
+## Disclaimer
+
+Images in this repository are collected on the Internet, mostly through crawling Reddit subreddit [r/dataisugly](https://www.reddit.com/r/dataisugly)
+
+All rights of the images are reserved to the original authors or owners.
+
+## License
+
+All the data labels and Jupyter notebooks are licensed under a [Creative Commons Attribution 4.0 International (CC BY 4.0) License](https://creativecommons.org/licenses/by/4.0/).

@@ -4,7 +4,6 @@ recycle
 web_cache
 .ipynb_checkpoints
 
-*credentials.json
 *.pyc
 *.sqlite
 *.tar.gz

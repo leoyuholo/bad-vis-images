@@ -1,6 +1,6 @@
 # Bad Vis Browser Images
 
-Repository of images, labels and Jupyter notebooks used in Bad Vis Browser
+Repository of images, labels and Jupyter notebooks used in Bad Vis Browser (https://leoyuholo.github.io/bad-vis-browser/)
 
 ## Disclaimer
 

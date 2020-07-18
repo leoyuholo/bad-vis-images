@@ -3,6 +3,7 @@ bad-vis-images
 recycle
 web_cache
 .ipynb_checkpoints
+labelling
 
 *credentials.json
 *.pyc

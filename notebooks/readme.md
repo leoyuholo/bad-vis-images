@@ -2,6 +2,10 @@
 
 Repository of Jupyter Notebooks for downloading bad visualisation examples
 
+## Prerequisite
+
+Put API tokens/secrets in the credentials directory before running crawlers.
+
 ## Notebook execution sequence
 1. crawlers (tumblr_crawler, reddit_crawler, reddit_pushshift_crawler, etc.)
 2. digest (tumblr_digest, reddit_digest)
